@@ -20,13 +20,27 @@ function calculaImc(peso, altura){
     return imc;
 }
 
-
-var imc1 = prompt("informe a sua altura");
-var imc2 = prompt("informe o seu peso");
+var nome = prompt("Informe seu nome: ")
+var imc1 = prompt("informe o seu peso");
+var imc2 = prompt("informe a sua altura");
 
 var imc = calculaImc(imc1, imc2);
 
-mostra("O imc calculado é "+ imc)
+mostra(nome + " o imc calculado é "+ imc);
+
+if(imc < 18.5){
+   mostra("Você esta a baixo do recomendado")
+}
+if(imc > 35){
+    mostra("Você está acima do recomendado")
+}
+if(imc >= 18.5 && imc <= 35){
+   
+    mostra("Seu imc esta exelente")
+ 
+}
+
+
 
 
 </script>
